@@ -25,7 +25,7 @@ nixPkgs = [
     "uv",
     "curl",
     "wget",
-    "ca-certificates"
+    "cacert"
 ]
 # Attempt to create /data, but don't fail if we can't (might be created at runtime or volume)
 cmds = ["mkdir -p /data || true", "chmod 777 /data || true"]
