@@ -6,7 +6,6 @@ nixPkgs = [
     "python3",
     "go",
     "docker-client",
-    "ffmpeg",
     "imagemagick",
     "graphviz",
     "sqlite",
