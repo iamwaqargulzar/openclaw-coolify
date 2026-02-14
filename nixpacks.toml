@@ -4,6 +4,7 @@
 nixPkgs = [
     "nodejs",
     "python3",
+    "python3Packages.pip",
     "go",
     "docker-client",
     "imagemagick",
