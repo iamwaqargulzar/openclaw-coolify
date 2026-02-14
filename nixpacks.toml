@@ -32,10 +32,10 @@ cmds = ["mkdir -p /data || true", "chmod 777 /data || true"]
 cmds = [
     "npm install", # Installs dependencies from package.json locally
     "pip3 install --break-system-packages ipython csvkit openpyxl python-docx pypdf botasaurus browser-use playwright",
-    "playwright install-deps || echo 'Warning: playwright install-deps failed, relying on system packages'",
-    "curl -fsSL https://bun.sh/install | bash",
-    "curl -fsSL https://claude.ai/install.sh | bash",
-    "curl -L https://code.kimi.com/install.sh | bash"
+    # playwright install-deps is handled by nix packages (chromium, ffmpeg etc)
+    "curl -fsSL https://bun.sh/install | bash || echo 'Bun install failed, continuing...'",
+    "curl -fsSL https://claude.ai/install.sh | bash || echo 'Claude install failed, continuing...'",
+    "curl -L https://code.kimi.com/install.sh | bash || echo 'Kimi install failed, continuing...'"
 ]
 
 [phases.build]
