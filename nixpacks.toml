@@ -22,7 +22,10 @@ nixPkgs = [
     "poppler_utils",
     "cloudflared",
     "github-cli",
-    "uv"
+    "uv",
+    "curl",
+    "wget",
+    "ca-certificates"
 ]
 # Attempt to create /data, but don't fail if we can't (might be created at runtime or volume)
 cmds = ["mkdir -p /data || true", "chmod 777 /data || true"]
