@@ -59,10 +59,9 @@ services:
       NANOBANANA_API_KEY: ${NANOBANANA_API_KEY}
       ELEVENLABS_API_KEY: ${ELEVENLABS_API_KEY}
 
-      SERVICE_URL_OPENCLAW_18789: null
-      SERVICE_URL_OPENCLAWWEBHOOK_8788: null
-      BASE_URL: 'https://${SERVICE_FQDN_OPENCLAW}'
-      PUBLIC_URL: 'https://${SERVICE_FQDN_OPENCLAW}'
+      # Coolify will auto-inject SERVICE_FQDN_OPENCLAW
+      BASE_URL: ${BASE_URL:-http://localhost:18789}
+      PUBLIC_URL: ${PUBLIC_URL:-http://localhost:18789}
       # Bootstrap controls
       OPENCLAW_AUTO_BOOTSTRAP: "1"
       OPENCLAW_PRINT_ACCESS: "1"
